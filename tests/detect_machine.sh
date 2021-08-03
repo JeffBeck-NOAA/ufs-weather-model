@@ -59,6 +59,7 @@ case $(hostname -f) in
   hfe10)                   MACHINE_ID=hera ;; ### hera10
   hfe11)                   MACHINE_ID=hera ;; ### hera11
   hfe12)                   MACHINE_ID=hera ;; ### hera12
+  hecflow01)               MACHINE_ID=hera ;; ### heraecflow01
 
   fe1)                     MACHINE_ID=jet ;; ### jet01
   fe2)                     MACHINE_ID=jet ;; ### jet02
@@ -88,6 +89,12 @@ case $(hostname -f) in
   cheyenne4.ib0.cheyenne.ucar.edu) MACHINE_ID=cheyenne ;; ### cheyenne4
   cheyenne5.ib0.cheyenne.ucar.edu) MACHINE_ID=cheyenne ;; ### cheyenne5
   cheyenne6.ib0.cheyenne.ucar.edu) MACHINE_ID=cheyenne ;; ### cheyenne6
+  chadmin1.ib0.cheyenne.ucar.edu) MACHINE_ID=cheyenne ;; ### cheyenne1
+  chadmin2.ib0.cheyenne.ucar.edu) MACHINE_ID=cheyenne ;; ### cheyenne1
+  chadmin3.ib0.cheyenne.ucar.edu) MACHINE_ID=cheyenne ;; ### cheyenne1
+  chadmin4.ib0.cheyenne.ucar.edu) MACHINE_ID=cheyenne ;; ### cheyenne1
+  chadmin5.ib0.cheyenne.ucar.edu) MACHINE_ID=cheyenne ;; ### cheyenne1
+  chadmin6.ib0.cheyenne.ucar.edu) MACHINE_ID=cheyenne ;; ### cheyenne1
 
   login1.stampede2.tacc.utexas.edu) MACHINE_ID=stampede ;; ### stampede1
   login2.stampede2.tacc.utexas.edu) MACHINE_ID=stampede ;; ### stampede2

@@ -1,17 +1,8 @@
-&amip_interp_nml
-       interp_oi_sst = .true.
-       use_ncep_sst  = .true.
-       use_ncep_ice  = .false.
-       no_anom_sst   = .false.
-       data_set      = 'reynolds_oi',
-       date_out_of_range = 'climo',
-/
-
 &atmos_model_nml
        blocksize    = 32
        chksum_debug = .false.
        dycore_only  = .false.
-       fdiag        = @[FDIAG]
+       ccpp_suite = '@[CCPP_SUITE]'
 /
 
 &diag_manager_nml
@@ -133,7 +124,6 @@
        use_ufo        = .true.
        pre_rad        = .false.
        crtrh          = 0.98,0.98,0.90
-       ncld           = 2
        imp_physics    = 10
        pdfcld         = .false.
        fhswr          = 3600.
@@ -152,9 +142,10 @@
        cal_pre        = .false.
        redrag         = .true.
        dspheat        = .fasle.
-       hybedmf        = @[HYBEDMF]
+       hybedmf        = .false.
        satmedmf       = .false.
        lheatstrg      = @[LHEATSTRG]
+       lseaspray      = @[LSEASPRAY]
        random_clds    = .true.
        trans_trac     = .true.
        cnvcld         = .false.
@@ -198,7 +189,7 @@
        fprcp          = 2
        pdfflag        = 4
        iccn           = 0
-       mg_do_graupel  = .true.
+       mg_do_graupel = .true.
        mg_do_hail     = .false.
        do_sb_physics  = .true.
        mg_do_ice_gmao = .false.
@@ -209,6 +200,8 @@
        max_lat        = 4000
        rhcmax         = 0.9999999
        effr_in        = .true.
+       oz_phys        = .false.
+       oz_phys_2015   = .true.
 
        nstf_name      = @[NSTF_NAME]
        iau_delthrs    = 6
@@ -234,7 +227,7 @@
        FNVETC   = @[FNVETC]
        FNSOTC   = @[FNSOTC]
        FNSMCC   = @[FNSMCC]
-       FNMSKH   = "seaice_newland.grb",
+       FNMSKH   = "global_slmask.t1534.3072.1536.grb",
        FNTSFA   = "",
        FNACNA   = "",
        FNSNOA   = "",
